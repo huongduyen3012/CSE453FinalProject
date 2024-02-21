@@ -5,12 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a63852a-f02d-44f5-b17f-f6e21cccb69f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/controller/TriangleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/entities/BoundaryValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/entities/Triangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/repositories/BoundaryValueRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/repositories/TriangleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/services/BoundaryValueService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/services/TriangleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/services/ValueNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testing/src/main/resources/templates/TriangleGenerator.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testing/src/test/java/com/project/testing/TriangleGeneratorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testing/src/test/java/com/project/testing/ValueTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testing/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/src/main/resources/templates/CommissiontestGenerator.html" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/main/resources/templates/CommissionGenerator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/src/main/resources/templates/TriangleTestGenerator.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/src/test/java/com/project/testing/TestingApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Rebase.Settings">
     <option name="NEW_BASE" value="main" />
@@ -53,6 +78,13 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -65,26 +97,154 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "duyen",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/CSE453FinalProject",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "vcs.Git",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;JUnit.TriangleGeneratorTest.testAddNew.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TriangleGeneratorTest.testClear.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TriangleGeneratorTest.testListAll.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ValueTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ValueTest.testAddNew.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ValueTest.testClear.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.TriangleGenerator.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.TriangleTestGenerator.html.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.TestingApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;kiet&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/EIU/CSE 453/CSE453FinalProject&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.project.testing.services" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.project.testing" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ValueTest.testClear">
+    <configuration name="TriangleGeneratorTest.testClear" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.project.testing" />
+      <option name="MAIN_CLASS_NAME" value="com.project.testing.TriangleGeneratorTest" />
+      <option name="METHOD_NAME" value="testClear" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ValueTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.project.testing" />
+      <option name="MAIN_CLASS_NAME" value="com.project.testing.ValueTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ValueTest.testAddNew" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.project.testing" />
+      <option name="MAIN_CLASS_NAME" value="com.project.testing.ValueTest" />
+      <option name="METHOD_NAME" value="testAddNew" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ValueTest.testClear" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.project.testing" />
+      <option name="MAIN_CLASS_NAME" value="com.project.testing.ValueTest" />
+      <option name="METHOD_NAME" value="testClear" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TriangleGenerator.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/CSE453FinalProject/testing/src/main/resources/templates/TriangleGenerator.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.project.demo.DemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="testing" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.project.testing.TestingApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ValueTest.testClear" />
+        <item itemvalue="JUnit.ValueTest.testAddNew" />
+        <item itemvalue="JUnit.ValueTest" />
+        <item itemvalue="JavaScript Debug.TriangleGenerator.html" />
+        <item itemvalue="JUnit.TriangleGeneratorTest.testClear" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -97,11 +257,51 @@
       <workItem from="1708170608027" duration="479000" />
       <workItem from="1708171131524" duration="185000" />
       <workItem from="1708171430736" duration="198000" />
+      <workItem from="1708270183681" duration="30000" />
+      <workItem from="1708270222823" duration="1418000" />
+      <workItem from="1708271661526" duration="1067000" />
+      <workItem from="1708272757842" duration="11000" />
+      <workItem from="1708272818840" duration="3115000" />
+      <workItem from="1708327539210" duration="3214000" />
+      <workItem from="1708334072613" duration="454000" />
+      <workItem from="1708335653389" duration="507000" />
+      <workItem from="1708336183156" duration="38000" />
+      <workItem from="1708347873771" duration="11000" />
+      <workItem from="1708347920270" duration="334000" />
+      <workItem from="1708353167207" duration="6848000" />
+      <workItem from="1708444358837" duration="2408000" />
+      <workItem from="1708446878167" duration="165000" />
+      <workItem from="1708481542142" duration="382000" />
+      <workItem from="1708482017682" duration="4720000" />
+      <workItem from="1708493720071" duration="309000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

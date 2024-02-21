@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Testing Application</title>
+    <link rel="stylesheet" th:href="@{/style.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" type="text/css">
+</head>
+<body>
+<div class="container text-center">
+    <h2>Triangle Test Generator</h2>
+    <form th:action="@{/triangle/generate}" method="get" th:object="${triangles}">
+        <div class="border border-secondary rounded p-3">
+            <div class="form-group row">
+                <label for="fromA">Side A from:</label>
+                <input type="number" id="fromA" name="fromA" min="10" max="220" required>
+                <label for="toA">to:</label>
+                <input type="number" id="toA" name="toA" min="10" max="220" required><br><br>
+            </div>
+            <div class="form-group row">
+                <label for="fromB">Side B from:</label>
+                <input type="number" id="fromB" name="fromB" min="10" max="220" required>
+                <label for="toB">to:</label>
+                <input type="number" id="toB" name="toB" min="10" max="220" required><br><br>
+            </div>
+            <div class="form-group row">
+                <label for="fromC">Side C from:</label>
+                <input type="number" id="fromC" name="fromC" min="10" max="220" required>
+                <label for="toC">to</label>
+                <input type="number" id="toC" name="toC" min="10" max="220" required><br><br>
+            </div>
+            <div class="form-group row">
+                <select class="custom-select" id="inputGroupSelect02">
+                    <option selected>Choose...</option>
+                    <option value="normal">Normal BVA</option>
+                    <option value="robust">Robust BVA</option>
+                </select>
+            </div>
+            <button type="submit">Generate Test Cases</button>
+        </div>
+    </form>
+    <br>
+
+    <table id="testCasesTable" class="table table-bordered">
+        <thead class="thead-dark">
+        <tr>
+            <th>Test Case</th>
+            <th>Side A</th>
+            <th>Side B</th>
+            <th>Side C</th>
+            <th>Expected Output</th>
+        </tr>
+        </thead>
+        <tbody>
+        <th:block th:each="triangle : ${triangle}">
+            <td>[[${triangle.id}]]</td>
+            <td>[[${triangle.side1}]]</td>
+            <td>[[${triangle.side2}]]</td>
+            <td>[[${triangle.side3}]]</td>
+            <td>[[${triangle.classify()}]]</td>
+        </th:block>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
