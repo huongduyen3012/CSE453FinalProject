@@ -12,25 +12,37 @@ import java.util.List;
 
 @Service
 public class TriangleService {
-    @Autowired private TriangleRepository repo;
+    @Autowired
+    private TriangleRepository repo;
 
-    public List<Triangle> listAll(){
+    public List<Triangle> listAll() {
         return (List<Triangle>) repo.findAll();
     }
 
-    public void save(Triangle triangle){
-        repo.save(triangle);
-    }
-
-    public void deleteAll(){
+    public void deleteAll() {
         repo.deleteAll();
     }
 
-    public List<Triangle> generateTestCases(){
-        List<Triangle> testCases = new ArrayList<>();
+    public void generateTestCases() {
+        int[] values = new int[]{10, 11, 115, 219, 220};
+        Triangle triangle = new Triangle();
+        triangle.setSide(115,115,115);
+        triangle.setType();
+        repo.save(triangle);
 
-
-
-        return  testCases;
+        for (int i = 0; i < values.length; i++) {
+            for (int j = 0; j < values.length; j++) {
+                for (int k = 0; k < values.length; k++) {
+                    if(values[i] != values[j] && values[i] != values[k]) {
+                        triangle = new Triangle();
+                        triangle.setSide(values[i], values[j], values[k]);
+                        triangle.setType();
+                        repo.save(triangle);
+                    }
+                }
+            }
+        }
     }
+
+//    private Triangle
 }

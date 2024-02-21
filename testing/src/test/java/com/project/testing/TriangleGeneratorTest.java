@@ -2,6 +2,7 @@ package com.project.testing;
 
 import com.project.testing.entities.Triangle;
 import com.project.testing.repositories.TriangleRepository;
+import com.project.testing.services.TriangleService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,8 @@ import java.util.Collection;
 @Rollback(value = false)
 public class TriangleGeneratorTest {
     @Autowired
-    private TriangleRepository repo;
+    private TriangleRepository repo ;
+
 
     @Test
     public void testAddNew() {
