@@ -17,11 +17,13 @@ public class TriangleController {
     @Autowired private BoundaryValueService valueService;
 
     @GetMapping("/triangle/generate")
-    public String generate(){
+    public String generate(Model model){
         triangleService.deleteAll();
-
-
+        triangleService.generateTestCases();
+        List<Triangle> triangles = triangleService.listAll();
+        model.addAttribute("triangles",triangles);
 
         return "TriangleGenerator";
     }
+
 }
