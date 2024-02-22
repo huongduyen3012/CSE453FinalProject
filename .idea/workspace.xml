@@ -5,27 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a63852a-f02d-44f5-b17f-f6e21cccb69f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/controller/CommissionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/entities/Commission.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/repositories/CommissionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/services/CommissionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/28633463-0a87-4fcb-9357-7f9908b084d2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/28633463-0a87-4fcb-9357-7f9908b084d2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/87777de6-c6d6-46fc-889b-34f04b99d646.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/87777de6-c6d6-46fc-889b-34f04b99d646/storage_v2/_src_/schema/commission.63yxPA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/87777de6-c6d6-46fc-889b-34f04b99d646/storage_v2/_src_/schema/commission_generator.fyhSAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/87777de6-c6d6-46fc-889b-34f04b99d646/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/87777de6-c6d6-46fc-889b-34f04b99d646/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/87777de6-c6d6-46fc-889b-34f04b99d646/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/87777de6-c6d6-46fc-889b-34f04b99d646/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/87777de6-c6d6-46fc-889b-34f04b99d646/storage_v2/_src_/schema/testing_project.6hNMoA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/87777de6-c6d6-46fc-889b-34f04b99d646/storage_v2/_src_/schema/triangle_generator.XLVCSA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/controller/TriangleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/controller/TriangleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/entities/BoundaryValue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/entities/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/entities/Triangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/repositories/BoundaryValueRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/repositories/TriangleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/repositories/TriangleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/services/BoundaryValueService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/services/TriangleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/services/TriangleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/services/ValueNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing/src/test/java/com/project/testing/ValueTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/src/main/resources/templates/TriangleGenerator.html" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/main/resources/templates/TriangleGenerator.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,7 +266,7 @@
       <workItem from="1708493720071" duration="3394000" />
       <workItem from="1708498225824" duration="8940000" />
       <workItem from="1708526378369" duration="15000" />
-      <workItem from="1708604868268" duration="122000" />
+      <workItem from="1708604868268" duration="657000" />
     </task>
     <servers />
   </component>
