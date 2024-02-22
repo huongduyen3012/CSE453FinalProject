@@ -6,14 +6,26 @@
   <component name="ChangeListManager">
     <list default="true" id="0a63852a-f02d-44f5-b17f-f6e21cccb69f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/87777de6-c6d6-46fc-889b-34f04b99d646.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/87777de6-c6d6-46fc-889b-34f04b99d646.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/28633463-0a87-4fcb-9357-7f9908b084d2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/28633463-0a87-4fcb-9357-7f9908b084d2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/87777de6-c6d6-46fc-889b-34f04b99d646.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/87777de6-c6d6-46fc-889b-34f04b99d646/storage_v2/_src_/schema/commission.63yxPA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/87777de6-c6d6-46fc-889b-34f04b99d646/storage_v2/_src_/schema/commission_generator.fyhSAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/87777de6-c6d6-46fc-889b-34f04b99d646/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/87777de6-c6d6-46fc-889b-34f04b99d646/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/87777de6-c6d6-46fc-889b-34f04b99d646/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/87777de6-c6d6-46fc-889b-34f04b99d646/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/87777de6-c6d6-46fc-889b-34f04b99d646/storage_v2/_src_/schema/testing_project.6hNMoA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/87777de6-c6d6-46fc-889b-34f04b99d646/storage_v2/_src_/schema/triangle_generator.XLVCSA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/controller/TriangleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/controller/TriangleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/entities/BoundaryValue.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/entities/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/entities/Triangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/repositories/BoundaryValueRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/repositories/TriangleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/repositories/TriangleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/services/BoundaryValueService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/services/TriangleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/services/TriangleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing/src/main/resources/templates/TriangleGenerator.html" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/main/resources/templates/TriangleGenerator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing/src/test/java/com/project/testing/TriangleGeneratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/test/java/com/project/testing/TriangleGeneratorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/services/ValueNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/src/test/java/com/project/testing/ValueTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,47 +100,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "JUnit.TriangleGeneratorTest.testAddNew.executor": "Run",
-    "JUnit.TriangleGeneratorTest.testClear.executor": "Run",
-    "JUnit.TriangleGeneratorTest.testGenerateTestCase.executor": "Run",
-    "JUnit.TriangleGeneratorTest.testListAll.executor": "Run",
-    "JUnit.ValueTest.executor": "Run",
-    "JUnit.ValueTest.testAddNew.executor": "Run",
-    "JUnit.ValueTest.testClear.executor": "Run",
-    "JavaScript Debug.TriangleGenerator.html.executor": "Run",
-    "JavaScript Debug.TriangleTestGenerator.html.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.TestingApplication.executor": "Run",
-    "git-widget-placeholder": "duyen",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/EIU/CSE 453/CSE453FinalProject",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "vcs.Git",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;JUnit.TriangleGeneratorTest.testAddNew.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TriangleGeneratorTest.testClear.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.TriangleGeneratorTest.testListAll.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ValueTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ValueTest.testAddNew.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ValueTest.testClear.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.TriangleGenerator.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.TriangleTestGenerator.html.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.TestingApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;kiet&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/EIU/CSE 453/CSE453FinalProject&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.kotlinCompiler&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.project.testing.services" />
@@ -138,7 +149,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.TestingApplication">
-    <configuration name="TriangleGeneratorTest.testGenerateTestCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TriangleGeneratorTest.testClear" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="testing" />
       <extension name="coverage">
         <pattern>
@@ -148,7 +159,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.project.testing" />
       <option name="MAIN_CLASS_NAME" value="com.project.testing.TriangleGeneratorTest" />
-      <option name="METHOD_NAME" value="testGenerateTestCase" />
+      <option name="METHOD_NAME" value="testClear" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -222,18 +233,17 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TriangleGeneratorTest.testGenerateTestCase" />
         <item itemvalue="JUnit.ValueTest.testClear" />
         <item itemvalue="JUnit.ValueTest.testAddNew" />
         <item itemvalue="JUnit.ValueTest" />
         <item itemvalue="JavaScript Debug.TriangleGenerator.html" />
+        <item itemvalue="JUnit.TriangleGeneratorTest.testClear" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-20.0.2-corretto-20.0.2.1-4caba194b151-5bc9ecd2" />
         <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
       </set>
     </attachedChunks>
@@ -266,8 +276,10 @@
       <workItem from="1708446878167" duration="165000" />
       <workItem from="1708481542142" duration="382000" />
       <workItem from="1708482017682" duration="4720000" />
-      <workItem from="1708493720071" duration="309000" />
-      <workItem from="1708496773833" duration="6505000" />
+      <workItem from="1708493720071" duration="3394000" />
+      <workItem from="1708498225824" duration="8940000" />
+      <workItem from="1708526378369" duration="15000" />
+      <workItem from="1708604868268" duration="122000" />
     </task>
     <servers />
   </component>

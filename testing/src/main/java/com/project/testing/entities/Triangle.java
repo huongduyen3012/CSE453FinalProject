@@ -40,7 +40,7 @@ public class Triangle {
     }
 
     public boolean isTriangle() {
-        return (side1 < side2 + side3) && (side2 < side1 + side3) && (side3 < side2 + side1);
+        return ((side1 < side2 + side3) && (side2 < side1 + side3) && (side3 < side2 + side1));
     }
 
     public Integer getId() {
@@ -56,12 +56,6 @@ public class Triangle {
     }
 
     public String classify() {
-        boolean c1 = (1 <= side1) && (side1 <= 220);
-        boolean c2 = (1 <= side2) && (side2 <= 220);
-        boolean c3 = (1 <= side3) && (side3 <= 220);
-
-        if (!c1 || !c2 || !c3)
-            return "OUT_OF_RANGE";
         if (isTriangle()) {
             if ((side1 == side2) && (side2 == side3))
                 return "EQUILATERAL";
@@ -70,7 +64,7 @@ public class Triangle {
             else
                 return "ISOSCELES";
         }
-        return "IsNotTriangle";
+        return "NOT A TRIANGLE";
     }
 
     @Override
