@@ -16,15 +16,20 @@ public class TriangleService {
         return (List<Triangle>) repo.findAll();
     }
 
-    public void generateTestCases() {
+    public void generateTestCases(String testType) {
         repo.truncateTable();
-
-        for (int i = 0; i < 4; i++) {
-            saveTriangle(i);
+        if (testType.equals("normal")) {
+            for (int i = 0; i < 4; i++) {
+                normalValues(i);
+            }
+        } else {
+            for (int i = 0; i < 4; i++) {
+                robustValues(i);
+            }
         }
     }
 
-    private void saveTriangle(int run) {
+    private void normalValues(int run) {
         int[] values = new int[]{10, 11, 219, 220};
 
         switch (run) {
@@ -59,4 +64,41 @@ public class TriangleService {
                 repo.save(triangle);
         }
     }
+
+    private void robustValues(int run) {
+        int[] values = new int[]{9, 10, 11, 219, 220, 221};
+
+        switch (run) {
+            case 1:
+                for (int i = 0; i < values.length; i++) {
+                    Triangle triangle = new Triangle();
+                    triangle.setSide(values[i], 115, 115);
+                    triangle.setType();
+                    repo.save(triangle);
+                }
+                break;
+            case 2:
+                for (int i = 0; i < values.length; i++) {
+                    Triangle triangle = new Triangle();
+                    triangle.setSide(115, values[i], 115);
+                    triangle.setType();
+                    repo.save(triangle);
+                }
+                break;
+            case 3:
+                for (int i = 0; i < values.length; i++) {
+                    Triangle triangle = new Triangle();
+                    triangle.setSide(115, 115, values[i]);
+                    triangle.setType();
+                    repo.save(triangle);
+                }
+                break;
+            default:
+                Triangle triangle = new Triangle();
+                triangle.setSide(115, 115, 115);
+                triangle.setType();
+                repo.save(triangle);
+        }
+    }
+
 }
