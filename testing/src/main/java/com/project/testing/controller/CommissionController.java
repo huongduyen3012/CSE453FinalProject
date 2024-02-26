@@ -7,10 +7,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class CommissionController {
-    @Autowired private CommissionService commissionService;
+    @Autowired
+    private CommissionService commissionService;
+
+    @GetMapping("/commission/generate")
+    public String generate() {
+        return "CommissionGenerator";
+    }
 
     @GetMapping("/commission")
-    public String generate()  {
+    public String commission() {
         return "CommissionGenerator";
     }
 }

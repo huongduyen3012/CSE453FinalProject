@@ -17,25 +17,6 @@
             <!--                <label for="toA">to:</label>-->
             <!--                <input type="number" id="toA" name="toA" min="10" max="220" required><br><br>-->
             <!--            </div>-->
-            <!--            <div class="form-group row">-->
-            <!--                <label for="fromB">Side B from:</label>-->
-            <!--                <input type="number" id="fromB" name="fromB" min="10" max="220" required>-->
-            <!--                <label for="toB">to:</label>-->
-            <!--                <input type="number" id="toB" name="toB" min="10" max="220" required><br><br>-->
-            <!--            </div>-->
-            <!--            <div class="form-group row">-->
-            <!--                <label for="fromC">Side C from:</label>-->
-            <!--                <input type="number" id="fromC" name="fromC" min="10" max="220" required>-->
-            <!--                <label for="toC">to</label>-->
-            <!--                <input type="number" id="toC" name="toC" min="10" max="220" required><br><br>-->
-            <!--            </div>-->
-            <!--            <div class="form-group row">-->
-            <!--                <select class="custom-select" id="inputGroupSelect02">-->
-            <!--                    <option selected>Choose...</option>-->
-            <!--                    <option value="normal">Normal BVA</option>-->
-            <!--                    <option value="robust">Robust BVA</option>-->
-            <!--                </select>-->
-            <!--            </div>-->
             <div class="form-group row">
                 <select class="custom-select" id="inputGroupSelect02" name="testType">
                     <option selected>Choose...</option>
@@ -44,10 +25,12 @@
                 </select>
             </div>
             <button type="submit">Generate Test Cases</button>
+            <a th:href="@{/index}">
+                <button type="button">Home</button>
+            </a>
         </div>
     </form>
     <br>
-
     <table id="testCasesTable" class="table table-bordered">
         <thead class="thead-dark">
         <tr>
