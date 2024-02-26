@@ -5,6 +5,7 @@ import com.project.testing.repositories.TriangleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -16,43 +17,39 @@ public class TriangleService {
         return (List<Triangle>) repo.findAll();
     }
 
-    public void generateTestCases(String testType) {
+    public void excute(String testType) {
         repo.truncateTable();
-        if (testType.equals("normal")) {
-            for (int i = 0; i < 4; i++) {
-                normalValues(i);
-            }
-        } else {
-            for (int i = 0; i < 4; i++) {
-                robustValues(i);
+        for (int i = 0; i < 4; i++) {
+            if (testType.equals("normal")) {
+                generateTestCases(i, Arrays.asList(10, 11, 219, 220));
+            } else {
+                generateTestCases(i, Arrays.asList(9, 10, 11, 219, 220, 221));
             }
         }
     }
 
-    private void normalValues(int run) {
-        int[] values = new int[]{10, 11, 219, 220};
-
-        switch (run) {
+    private void generateTestCases(int location, List<Integer> values) {
+        switch (location) {
             case 1:
-                for (int i = 0; i < values.length; i++) {
+                for (Integer value : values) {
                     Triangle triangle = new Triangle();
-                    triangle.setSide(values[i], 115, 115);
+                    triangle.setSide(value, 115, 115);
                     triangle.setType();
                     repo.save(triangle);
                 }
                 break;
             case 2:
-                for (int i = 0; i < values.length; i++) {
+                for (Integer value : values) {
                     Triangle triangle = new Triangle();
-                    triangle.setSide(115, values[i], 115);
+                    triangle.setSide(115, value, 115);
                     triangle.setType();
                     repo.save(triangle);
                 }
                 break;
             case 3:
-                for (int i = 0; i < values.length; i++) {
+                for (Integer value : values) {
                     Triangle triangle = new Triangle();
-                    triangle.setSide(115, 115, values[i]);
+                    triangle.setSide(115, 115, value);
                     triangle.setType();
                     repo.save(triangle);
                 }
@@ -64,41 +61,4 @@ public class TriangleService {
                 repo.save(triangle);
         }
     }
-
-    private void robustValues(int run) {
-        int[] values = new int[]{9, 10, 11, 219, 220, 221};
-
-        switch (run) {
-            case 1:
-                for (int i = 0; i < values.length; i++) {
-                    Triangle triangle = new Triangle();
-                    triangle.setSide(values[i], 115, 115);
-                    triangle.setType();
-                    repo.save(triangle);
-                }
-                break;
-            case 2:
-                for (int i = 0; i < values.length; i++) {
-                    Triangle triangle = new Triangle();
-                    triangle.setSide(115, values[i], 115);
-                    triangle.setType();
-                    repo.save(triangle);
-                }
-                break;
-            case 3:
-                for (int i = 0; i < values.length; i++) {
-                    Triangle triangle = new Triangle();
-                    triangle.setSide(115, 115, values[i]);
-                    triangle.setType();
-                    repo.save(triangle);
-                }
-                break;
-            default:
-                Triangle triangle = new Triangle();
-                triangle.setSide(115, 115, 115);
-                triangle.setType();
-                repo.save(triangle);
-        }
-    }
-
 }

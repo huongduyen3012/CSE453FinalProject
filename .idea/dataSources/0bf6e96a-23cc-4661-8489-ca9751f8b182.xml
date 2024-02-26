@@ -5,7 +5,9 @@
       <DefaultCasing>lower/lower</DefaultCasing>
       <DefaultEngine>InnoDB</DefaultEngine>
       <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
-      <Grants>|root||root|localhost|ALTER|G
+      <Grants>|root||Kiet||ALTER|G
+|root||root|localhost|ALTER|G
+|root||Kiet||ALTER ROUTINE|G
 |root||root|localhost|ALTER ROUTINE|G
 |root||root|localhost|APPLICATION_PASSWORD_ADMIN|G
 |root||mysql.infoschema|localhost|AUDIT_ABORT_EXEMPT|G
@@ -23,19 +25,30 @@
 |root||root|localhost|CLONE_ADMIN|G
 |root||mysql.session|localhost|CONNECTION_ADMIN|G
 |root||root|localhost|CONNECTION_ADMIN|G
+|root||Kiet||CREATE|G
 |root||root|localhost|CREATE|G
 |root||root|localhost|CREATE ROLE|G
+|root||Kiet||CREATE ROUTINE|G
 |root||root|localhost|CREATE ROUTINE|G
+|root||Kiet||CREATE TABLESPACE|G
 |root||root|localhost|CREATE TABLESPACE|G
+|root||Kiet||CREATE TEMPORARY TABLES|G
 |root||root|localhost|CREATE TEMPORARY TABLES|G
+|root||Kiet||CREATE USER|G
 |root||root|localhost|CREATE USER|G
+|root||Kiet||CREATE VIEW|G
 |root||root|localhost|CREATE VIEW|G
+|root||Kiet||DELETE|G
 |root||root|localhost|DELETE|G
+|root||Kiet||DROP|G
 |root||root|localhost|DROP|G
 |root||root|localhost|DROP ROLE|G
 |root||root|localhost|ENCRYPTION_KEY_ADMIN|G
+|root||Kiet||EVENT|G
 |root||root|localhost|EVENT|G
+|root||Kiet||EXECUTE|G
 |root||root|localhost|EXECUTE|G
+|root||Kiet||FILE|G
 |root||root|localhost|FILE|G
 |root||mysql.infoschema|localhost|FIREWALL_EXEMPT|G
 |root||mysql.session|localhost|FIREWALL_EXEMPT|G
@@ -47,24 +60,33 @@
 |root||root|localhost|FLUSH_USER_RESOURCES|G
 |root||root|localhost|GROUP_REPLICATION_ADMIN|G
 |root||root|localhost|GROUP_REPLICATION_STREAM|G
+|root||Kiet||INDEX|G
 |root||root|localhost|INDEX|G
 |root||root|localhost|INNODB_REDO_LOG_ARCHIVE|G
 |root||root|localhost|INNODB_REDO_LOG_ENABLE|G
+|root||Kiet||INSERT|G
 |root||root|localhost|INSERT|G
+|root||Kiet||LOCK TABLES|G
 |root||root|localhost|LOCK TABLES|G
 |root||root|localhost|PASSWORDLESS_USER_ADMIN|G
 |root||mysql.session|localhost|PERSIST_RO_VARIABLES_ADMIN|G
 |root||root|localhost|PERSIST_RO_VARIABLES_ADMIN|G
+|root||Kiet||PROCESS|G
 |root||root|localhost|PROCESS|G
+|root||Kiet||REFERENCES|G
 |root||root|localhost|REFERENCES|G
+|root||Kiet||RELOAD|G
 |root||root|localhost|RELOAD|G
+|root||Kiet||REPLICATION CLIENT|G
 |root||root|localhost|REPLICATION CLIENT|G
+|root||Kiet||REPLICATION SLAVE|G
 |root||root|localhost|REPLICATION SLAVE|G
 |root||root|localhost|REPLICATION_APPLIER|G
 |root||root|localhost|REPLICATION_SLAVE_ADMIN|G
 |root||root|localhost|RESOURCE_GROUP_ADMIN|G
 |root||root|localhost|RESOURCE_GROUP_USER|G
 |root||root|localhost|ROLE_ADMIN|G
+|root||Kiet||SELECT|G
 |root||mysql.infoschema|localhost|SELECT|G
 |root||root|localhost|SELECT|G
 |root||root|localhost|SENSITIVE_VARIABLES_OBSERVER|G
@@ -72,11 +94,15 @@
 |root||mysql.session|localhost|SESSION_VARIABLES_ADMIN|G
 |root||root|localhost|SESSION_VARIABLES_ADMIN|G
 |root||root|localhost|SET_USER_ID|G
+|root||Kiet||SHOW DATABASES|G
 |root||root|localhost|SHOW DATABASES|G
+|root||Kiet||SHOW VIEW|G
 |root||root|localhost|SHOW VIEW|G
 |root||root|localhost|SHOW_ROUTINE|G
+|root||Kiet||SHUTDOWN|G
 |root||mysql.session|localhost|SHUTDOWN|G
 |root||root|localhost|SHUTDOWN|G
+|root||Kiet||SUPER|G
 |root||mysql.session|localhost|SUPER|G
 |root||root|localhost|SUPER|G
 |root||mysql.infoschema|localhost|SYSTEM_USER|G
@@ -87,9 +113,12 @@
 |root||root|localhost|SYSTEM_VARIABLES_ADMIN|G
 |root||root|localhost|TABLE_ENCRYPTION_ADMIN|G
 |root||root|localhost|TELEMETRY_LOG_ADMIN|G
+|root||Kiet||TRIGGER|G
 |root||root|localhost|TRIGGER|G
+|root||Kiet||UPDATE|G
 |root||root|localhost|UPDATE|G
 |root||root|localhost|XA_RECOVER_ADMIN|G
+|root||Kiet||grant option|G
 |root||root|localhost|grant option|G
 performance_schema|schema||mysql.session|localhost|SELECT|G
 sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
@@ -1009,43 +1038,41 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <schema id="292" parent="1" name="assignment7">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="293" parent="1" name="book_test">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <schema id="294" parent="1" name="information_schema">
+    <schema id="293" parent="1" name="information_schema">
       <CollationName>utf8mb3_general_ci</CollationName>
     </schema>
-    <schema id="295" parent="1" name="mysql">
+    <schema id="294" parent="1" name="mysql">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="296" parent="1" name="performance_schema">
+    <schema id="295" parent="1" name="performance_schema">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="297" parent="1" name="project">
+    <schema id="296" parent="1" name="project_305">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="298" parent="1" name="project_305">
+    <schema id="297" parent="1" name="sys">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="299" parent="1" name="sys">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <schema id="300" parent="1" name="testing_project">
+    <schema id="298" parent="1" name="testing_project">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-02-25.23:55:22</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-02-26.04:05:57</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
-    <schema id="301" parent="1" name="userdb">
+    <schema id="299" parent="1" name="userdb">
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </schema>
+    <schema id="300" parent="1" name="b&apos;assignment1&apos;">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <user id="302" parent="1" name="Client1">
-      <Host>localhost</Host>
-      <Plugin>caching_sha2_password</Plugin>
-    </user>
-    <user id="303" parent="1" name="Client2">
-      <Host>localhost</Host>
-      <Plugin>caching_sha2_password</Plugin>
-    </user>
+    <schema id="301" parent="1" name="assignment3">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="302" parent="1" name="final_project">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="303" parent="1" name="book_store">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
     <user id="304" parent="1" name="mysql.infoschema">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
@@ -1065,127 +1092,84 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <table id="308" parent="300" name="boundary_values">
+    <user id="308" parent="1" name="Kiet">
+      <Plugin>caching_sha2_password</Plugin>
+    </user>
+    <table id="309" parent="298" name="commissions">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="309" parent="300" name="commission">
+    <table id="310" parent="298" name="triangles">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="310" parent="300" name="triangles">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </table>
-    <column id="311" parent="308" name="id">
-      <AutoIncrement>1</AutoIncrement>
+    <column id="311" parent="309" name="id">
+      <AutoIncrement>5</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="312" parent="308" name="max">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
+    <column id="312" parent="309" name="commission">
+      <DasType>double|0s</DasType>
       <Position>2</Position>
     </column>
-    <column id="313" parent="308" name="min">
+    <column id="313" parent="309" name="barrales">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="314" parent="308" name="type">
-      <DasType>varchar(15)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-    </column>
-    <index id="315" parent="308" name="PRIMARY">
-      <ColNames>id</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="316" parent="308" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="317" parent="309" name="id">
-      <AutoIncrement>1</AutoIncrement>
+    <column id="314" parent="309" name="locks">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="318" parent="309" name="barrales_price">
-      <DasType>double|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <column id="319" parent="309" name="lock_price">
-      <DasType>double|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-    </column>
-    <column id="320" parent="309" name="stock_price">
-      <DasType>double|0s</DasType>
-      <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="321" parent="309" name="total_barrales">
+    <column id="315" parent="309" name="stocks">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="322" parent="309" name="total_locks">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-    </column>
-    <column id="323" parent="309" name="total_stocks">
-      <DasType>int|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>7</Position>
-    </column>
-    <index id="324" parent="309" name="PRIMARY">
+    <index id="316" parent="309" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="325" parent="309" name="PRIMARY">
+    <key id="317" parent="309" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="326" parent="310" name="id">
-      <AutoIncrement>14</AutoIncrement>
+    <column id="318" parent="310" name="id">
+      <AutoIncrement>1</AutoIncrement>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="327" parent="310" name="side1">
+    <column id="319" parent="310" name="side1">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="328" parent="310" name="side2">
+    <column id="320" parent="310" name="side2">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="329" parent="310" name="side3">
+    <column id="321" parent="310" name="side3">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="330" parent="310" name="type">
+    <column id="322" parent="310" name="type">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <index id="331" parent="310" name="PRIMARY">
+    <index id="323" parent="310" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="332" parent="310" name="PRIMARY">
+    <key id="324" parent="310" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

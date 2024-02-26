@@ -6,14 +6,14 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Testing Application</title>
-    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" type="text/css">
-    <link rel="stylesheet" th:href="@{/style.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/webjar/bootstrap/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}">
 
 </head>
 <body>
 <div class="container text-center">
     <h2>Commission Test Generator</h2>
-    <form th:action="@{/commision/generate}" method="get" th:object="${commission}">
+    <form th:action="@{/commission/generate}" method="get" th:object="${commission}">
         <div class="border border-secondary rounded p-3">
             <!--            <div class="form-group row">-->
             <!--                <label for="fromA">Side A from:</label>-->
@@ -29,36 +29,33 @@
                 </select>
             </div>
             <button type="submit">Generate Test Cases</button>
-            <a th:href="@{/index}">
-                <button type="button">Home</button>
-            </a>
         </div>
     </form>
-    <br>
-
-    <table id="testCasesTable" class="table table-bordered">
-        <thead class="thead-dark">
-        <tr>
-            <th>Test Case</th>
-            <th>Side A</th>
-            <th>Side B</th>
-            <th>Side C</th>
-            <th>Expected Output</th>
-        </tr>
-        </thead>
-        <tbody>
-        <th:block th:each="triangle : ${triangles}">
-            <tr>
-                <td>[[${triangle.id}]]</td>
-                <td>[[${triangle.side1}]]</td>
-                <td>[[${triangle.side2}]]</td>
-                <td>[[${triangle.side3}]]</td>
-                <td>[[${triangle.type}]]</td>
-            </tr>
-        </th:block>
-        </tbody>
-    </table>
 </div>
 
+<br>
+
+<table id="testCasesTable" class="table table-bordered">
+    <thead class="thead-dark">
+    <tr>
+        <th>Test Case</th>
+        <th>Locks</th>
+        <th>Stocks</th>
+        <th>Barrels</th>
+        <th>Expected Output</th>
+    </tr>
+    </thead>
+    <tbody>
+    <th:block th:each="commission : ${commissions}">
+        <tr>
+            <td>[[${commission.id}]]</td>
+            <td>[[${commission.totalLocks}]]</td>
+            <td>[[${commission.totalStocks}]]</td>
+            <td>[[${commission.totalBarrales}]]</td>
+            <td>[[${commission.commission}]]</td>
+        </tr>
+    </th:block>
+    </tbody>
+</table>
 </body>
 </html>
