@@ -17,9 +17,9 @@ public class TriangleController {
     @GetMapping("/triangle/generate")
     public String generate(Model model, @RequestParam("testType") String testType){
         if (testType.equals("normal")) {
-            triangleService.generateTestCases(testType);
+            triangleService.excute(testType);
         } else if (testType.equals("robust")) {
-            triangleService.generateTestCases(testType);
+            triangleService.excute(testType);
         }
         List<Triangle> triangles = triangleService.listAll();
         model.addAttribute("triangles",triangles);

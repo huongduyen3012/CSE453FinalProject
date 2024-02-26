@@ -3,21 +3,25 @@ package com.project.testing.entities;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "commission")
+@Table(name = "commissions")
 public class Commission {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(nullable = false)
+    @Column(nullable = false, name = "locks")
     private int totalLocks;
-    @Column(nullable = false)
+    @Column(nullable = false, name = "stocks")
     private int totalStocks;
-    @Column(nullable = false)
+    @Column(nullable = false, name = "barrales")
     private int totalBarrales;
+    @Column()
+    private double commission;
+    @Transient
     private double lockPrice;
+    @Transient
     private double stockPrice;
+    @Transient
     private double barralesPrice;
-
     public Commission() {
         lockPrice = 45.0;
         stockPrice = 30.0;
@@ -30,16 +34,40 @@ public class Commission {
         this.totalBarrales = barrales;
     }
 
+    public Integer getId() {
+        return id;
+    }
+
     public int getTotalLocks() {
         return totalLocks;
+    }
+
+    public void setTotalLocks(int totalLocks) {
+        this.totalLocks = totalLocks;
     }
 
     public int getTotalStocks() {
         return totalStocks;
     }
 
+    public void setTotalStocks(int totalStocks) {
+        this.totalStocks = totalStocks;
+    }
+
     public int getTotalBarrales() {
         return totalBarrales;
+    }
+
+    public void setTotalBarrales(int totalBarrales) {
+        this.totalBarrales = totalBarrales;
+    }
+
+    public double getCommission() {
+        return commission;
+    }
+
+    public void setCommission() {
+        this.commission = calCommission(calSale());
     }
 
     public double calSale() {
