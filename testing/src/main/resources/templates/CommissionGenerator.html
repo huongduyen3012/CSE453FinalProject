@@ -6,35 +6,59 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Testing Application</title>
-    <link rel="stylesheet" type="text/css" th:href="@{../static/style.css}">
-    <link rel="stylesheet" type="text/css" th:href="@{/webjar/bootstrap/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/style.css}">
 
 </head>
 <body>
-<h2>Commission Test Generator</h2>
-<div>
-    <label for="locks">Locks (1-60):</label>
-    <input type="number" id="locks" name="locks" min="1" max="60" required><br><br>
+<div class="container text-center">
+    <h2>Commission Test Generator</h2>
+    <form th:action="@{/commision/generate}" method="get" th:object="${commission}">
+        <div class="border border-secondary rounded p-3">
+            <!--            <div class="form-group row">-->
+            <!--                <label for="fromA">Side A from:</label>-->
+            <!--                <input type="number" id="fromA" name="fromA" min="10" max="220" required>-->
+            <!--                <label for="toA">to:</label>-->
+            <!--                <input type="number" id="toA" name="toA" min="10" max="220" required><br><br>-->
+            <!--            </div>-->
+            <div class="form-group row">
+                <select class="custom-select" id="inputGroupSelect02" name="testType">
+                    <option selected>Choose...</option>
+                    <option value="normal">Normal BVA</option>
+                    <option value="robust">Robust BVA</option>
+                </select>
+            </div>
+            <button type="submit">Generate Test Cases</button>
+            <a th:href="@{/index}">
+                <button type="button">Home</button>
+            </a>
+        </div>
+    </form>
+    <br>
 
-    <label for="stocks">Stocks (1-70):</label>
-    <input type="number" id="stocks" name="stocks" min="1" max="70" required><br><br>
-
-    <label for="barrels">Barrels (1-80):</label>
-    <input type="number" id="barrels" name="barrels" min="1" max="80" required><br><br>
-
-    <button onclick="generateTestCases()">Generate Test Cases</button>
+    <table id="testCasesTable" class="table table-bordered">
+        <thead class="thead-dark">
+        <tr>
+            <th>Test Case</th>
+            <th>Side A</th>
+            <th>Side B</th>
+            <th>Side C</th>
+            <th>Expected Output</th>
+        </tr>
+        </thead>
+        <tbody>
+        <th:block th:each="triangle : ${triangles}">
+            <tr>
+                <td>[[${triangle.id}]]</td>
+                <td>[[${triangle.side1}]]</td>
+                <td>[[${triangle.side2}]]</td>
+                <td>[[${triangle.side3}]]</td>
+                <td>[[${triangle.type}]]</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
 </div>
 
-<br>
-
-<table id="testCasesTable">
-    <tr>
-        <th>Test Case</th>
-        <th>Locks</th>
-        <th>Stocks</th>
-        <th>Barrels</th>
-        <th>Expected Commission</th>
-    </tr>
-</table>
 </body>
 </html>

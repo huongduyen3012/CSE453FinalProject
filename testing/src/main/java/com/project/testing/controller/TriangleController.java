@@ -27,4 +27,13 @@ public class TriangleController {
         return "TriangleGenerator";
     }
 
+    @GetMapping("/triangle")
+    public String triangle() {
+        return "TriangleGenerator";
+    }
+
+    @GetMapping("/index")
+    public String index() {
+        return "index";
+    }
 }
