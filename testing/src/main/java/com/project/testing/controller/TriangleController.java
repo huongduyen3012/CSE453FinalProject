@@ -12,17 +12,19 @@ import java.util.List;
 
 @Controller
 public class TriangleController {
-    @Autowired private TriangleService triangleService;
+    @Autowired
+    private TriangleService triangleService;
 
     @GetMapping("/triangle/generate")
-    public String generate(Model model, @RequestParam("testType") String testType){
+    public String generate(Model model, @RequestParam("testType") String testType,
+                           @RequestParam("from") int from, @RequestParam("to") int to) {
         if (testType.equals("normal")) {
-            triangleService.excute(testType);
+            triangleService.execute(testType, from, to);
         } else if (testType.equals("robust")) {
-            triangleService.excute(testType);
+            triangleService.execute(testType, from, to);
         }
         List<Triangle> triangles = triangleService.listAll();
-        model.addAttribute("triangles",triangles);
+        model.addAttribute("triangles", triangles);
 
         return "TriangleGenerator";
     }
