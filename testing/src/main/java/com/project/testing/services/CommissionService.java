@@ -33,11 +33,9 @@ public class CommissionService {
     public void execute(String testType, int fromLock, int toLock,
                         int fromStock, int toStock, int fromBarrel, int toBarrel) {
         this.deleteAll();
-
         lockValues = new LinkedList<>(Arrays.asList(fromLock, fromLock + 1, toLock - 1, toLock));
         stockValues = new LinkedList<>(Arrays.asList(fromStock, fromStock + 1, toStock - 1, toStock));
         barrelValues = new LinkedList<>(Arrays.asList(fromBarrel, fromBarrel + 1, toBarrel - 1, toBarrel));
-
         if (testType.equalsIgnoreCase("robust")) {
             lockValues.addFirst(lockValues.getFirst() - 1);
             lockValues.addLast(lockValues.getLast() + 1);
@@ -54,11 +52,9 @@ public class CommissionService {
 
     private void generateTestCases(int size, int type, int fromLock, int toLock,
                                    int fromStock, int toStock, int fromBarrel, int toBarrel) {
-
         int nomLock = (fromLock + toLock) / 2;
         int nomStock = (fromStock + toStock) / 2;
         int nomBarrel = (fromBarrel + toBarrel) / 2;
-
         if (type == 0) {
             Commission commission = new Commission();
             commission.setInput(nomLock, nomStock, nomBarrel);

@@ -1,6 +1,5 @@
 package com.project.testing.services;
 
-import com.project.testing.entities.Input;
 import com.project.testing.entities.Triangle;
 import com.project.testing.repositories.TriangleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,8 +13,7 @@ import java.util.List;
 public class TriangleService {
     @Autowired
     private TriangleRepository repo;
-
-    private List<Integer> values = new LinkedList<>();
+    private List<Integer> edgeValues = new LinkedList<>();
 
     public List<Triangle> listAll() {
         return (List<Triangle>) repo.findAll();
@@ -29,24 +27,22 @@ public class TriangleService {
         repo.truncateTable();
     }
 
-    public void execute(Input input) {
+    public void execute(String testType, int from, int to) {
         this.deleteAll();
-        this.values = input.getInputAsList();
-
-        if (input.getType().equalsIgnoreCase("robust")) {
-            this.values.addFirst(this.values.getFirst() - 1);
-            this.values.addLast(this.values.getLast() + 1);
+        edgeValues = new LinkedList<>(Arrays.asList(from, from + 1, to - 1, to));
+        if (testType.equalsIgnoreCase("robust")) {
+            edgeValues.addFirst(edgeValues.getFirst() - 1);
+            edgeValues.addLast(edgeValues.getLast() + 1);
         }
         for (int i = 0; i < 4; i++) {
-            generateTestCases(this.values.size(), i);
+            generateTestCases(edgeValues.size(), i, from, to);
         }
     }
 
 
-    private void generateTestCases(int size, int location) {
-        int nom = values.get(values.size() / 2);
-
-        if (location == 0) {
+    private void generateTestCases(int size, int type, int from, int to) {
+        int nom = (from + to) / 2;
+        if (type == 0) {
             Triangle triangle = new Triangle();
             triangle.setSide(nom, nom, nom);
             triangle.setType();
@@ -58,12 +54,12 @@ public class TriangleService {
             Triangle triangle = new Triangle();
             triangle.setSide(nom, nom, nom);
 
-            if (location == 1) {
-                triangle.setSide1(values.get(i));
-            } else if (location == 2) {
-                triangle.setSide2(values.get(i));
+            if (type == 1) {
+                triangle.setSide1(edgeValues.get(i));
+            } else if (type == 2) {
+                triangle.setSide2(edgeValues.get(i));
             } else {
-                triangle.setSide3(values.get(i));
+                triangle.setSide3(edgeValues.get(i));
             }
 
             triangle.setType();

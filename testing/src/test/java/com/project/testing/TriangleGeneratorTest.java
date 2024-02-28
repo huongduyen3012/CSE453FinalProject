@@ -19,6 +19,7 @@ public class TriangleGeneratorTest {
     @Autowired
     private TriangleRepository repo ;
 
+
     @Test
     public void testAddNew() {
         Triangle triangle = new Triangle();
