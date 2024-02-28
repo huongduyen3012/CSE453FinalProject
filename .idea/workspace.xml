@@ -5,19 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a63852a-f02d-44f5-b17f-f6e21cccb69f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/testing/src/main/resources/static/custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/entities/Input.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/repositories/ValueRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/services/ValueService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testing/src/test/java/com/project/testing/InputTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/0bf6e96a-23cc-4661-8489-ca9751f8b182.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0bf6e96a-23cc-4661-8489-ca9751f8b182.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testing/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/controller/CommissionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/controller/CommissionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/controller/TriangleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/controller/TriangleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/entities/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/entities/Triangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/services/CommissionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/services/CommissionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/services/TriangleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/services/TriangleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/src/main/resources/static/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/main/resources/static/custom.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testing/src/main/resources/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/main/resources/static/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing/src/main/resources/templates/CommissionGenerator.html" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/main/resources/templates/CommissionGenerator.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing/src/main/resources/templates/TriangleGenerator.html" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/main/resources/templates/TriangleGenerator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/src/main/resources/templates/TriangleGenerator.html" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/main/resources/templates/triangle.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testing/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/src/test/java/com/project/testing/TriangleGeneratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/test/java/com/project/testing/TriangleGeneratorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +29,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -101,6 +102,7 @@
     &quot;JUnit.CommissionGeneratorTest.testAddNew.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.CommissionGeneratorTest.testClear.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.CommissionGeneratorTest.testListAll.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InputTest.testAddNew.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.TriangleGeneratorTest.testAddNew.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.TriangleGeneratorTest.testClear.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.TriangleGeneratorTest.testGenerateTestCase.executor&quot;: &quot;Run&quot;,
@@ -117,7 +119,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;Spring Boot.TestingApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;duyen&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;kiet&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/EIU/CSE 453/CSE453FinalProject&quot;,
@@ -144,24 +146,12 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.project.testing" />
+      <recent name="com.project.testing.services" />
+      <recent name="com.project.testing.repositories" />
+      <recent name="com.project.testing.controller" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.TestingApplication">
-    <configuration name="CommissionGeneratorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="testing" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.project.testing.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.project.testing" />
-      <option name="MAIN_CLASS_NAME" value="com.project.testing.CommissionGeneratorTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CommissionGeneratorTest.testAddNew" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="testing" />
       <extension name="coverage">
@@ -210,8 +200,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TriangleGenerator.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/CSE453FinalProject/testing/src/main/resources/templates/TriangleGenerator.html" useBuiltInWebServerPort="true">
-      <method v="2" />
+    <configuration name="InputTest.testAddNew" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.project.testing" />
+      <option name="MAIN_CLASS_NAME" value="com.project.testing.InputTest" />
+      <option name="METHOD_NAME" value="testAddNew" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TriangleGeneratorTest.testAddNew" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="testing" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.project.testing" />
+      <option name="MAIN_CLASS_NAME" value="com.project.testing.TriangleGeneratorTest" />
+      <option name="METHOD_NAME" value="testAddNew" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -231,18 +250,17 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.InputTest.testAddNew" />
+        <item itemvalue="JUnit.TriangleGeneratorTest.testAddNew" />
         <item itemvalue="JUnit.CommissionGeneratorTest.testClear" />
         <item itemvalue="JUnit.CommissionGeneratorTest.testListAll" />
         <item itemvalue="JUnit.CommissionGeneratorTest.testAddNew" />
-        <item itemvalue="JUnit.CommissionGeneratorTest" />
-        <item itemvalue="JavaScript Debug.TriangleGenerator.html" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-20.0.2-corretto-20.0.2.1-4caba194b151-5bc9ecd2" />
         <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
       </set>
     </attachedChunks>
@@ -292,6 +310,16 @@
       <workItem from="1708935976065" duration="1802000" />
       <workItem from="1708943761877" duration="10408000" />
       <workItem from="1708994727212" duration="1653000" />
+      <workItem from="1709001909655" duration="765000" />
+      <workItem from="1709002927913" duration="1365000" />
+      <workItem from="1709004653600" duration="576000" />
+      <workItem from="1709024177868" duration="39000" />
+      <workItem from="1709048676535" duration="1333000" />
+      <workItem from="1709088138873" duration="3395000" />
+      <workItem from="1709091549915" duration="490000" />
+      <workItem from="1709098975483" duration="5411000" />
+      <workItem from="1709105572541" duration="783000" />
+      <workItem from="1709106372099" duration="98000" />
     </task>
     <servers />
   </component>
