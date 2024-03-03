@@ -27,20 +27,6 @@ public class TriangleController {
         return "TriangleGenerator";
     }
 
-    @GetMapping("/triangle/generate")
-    public String generate(Model model, @RequestParam("testType") String testType,
-                           @RequestParam("from") int from, @RequestParam("to") int to) {
-        if (testType.equals("normal")) {
-            triangleService.execute(testType, from, to);
-        } else if (testType.equals("robust")) {
-            triangleService.execute(testType, from, to);
-        }
-        List<Triangle> triangles = triangleService.listAll();
-        model.addAttribute("triangles", triangles);
-
-        return "TriangleGenerator";
-    }
-
     @GetMapping("/triangle")
     public String triangle() {
         return "TriangleGenerator";
