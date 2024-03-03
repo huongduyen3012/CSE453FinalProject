@@ -39,18 +39,6 @@ public class Triangle {
         return side3;
     }
 
-    public void setSide1(int side1) {
-        this.side1 = side1;
-    }
-
-    public void setSide2(int side2) {
-        this.side2 = side2;
-    }
-
-    public void setSide3(int side3) {
-        this.side3 = side3;
-    }
-
     public boolean isTriangle() {
         return ((side1 < side2 + side3) && (side2 < side1 + side3) && (side3 < side2 + side1));
     }

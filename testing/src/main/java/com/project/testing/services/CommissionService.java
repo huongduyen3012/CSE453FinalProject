@@ -14,9 +14,9 @@ public class CommissionService {
     @Autowired
     private CommissionRepository repo;
 
-    private List<Integer> lockValues = new LinkedList<>();
-    private List<Integer> stockValues = new LinkedList<>();
-    private List<Integer> barrelValues = new LinkedList<>();
+    private List<Integer> lockValues = new LinkedList<>(Arrays.asList(1, 2, 59, 60));
+    private List<Integer> stockValues = new LinkedList<>(Arrays.asList(1, 2, 69, 70));
+    private List<Integer> barrelValues = new LinkedList<>(Arrays.asList(1, 2, 79, 80));
 
     public List<Commission> listAll() {
         return (List<Commission>) repo.findAll();
@@ -30,8 +30,7 @@ public class CommissionService {
         repo.truncateTable();
     }
 
-    public void execute(String testType, int fromLock, int toLock,
-                        int fromStock, int toStock, int fromBarrel, int toBarrel) {
+    public void execute(String testType) {
         this.deleteAll();
         lockValues = new LinkedList<>(Arrays.asList(fromLock, fromLock + 1, toLock - 1, toLock));
         stockValues = new LinkedList<>(Arrays.asList(fromStock, fromStock + 1, toStock - 1, toStock));
@@ -46,7 +45,7 @@ public class CommissionService {
         }
 
         for (int i = 0; i < 4; i++) {
-            generateTestCases(stockValues.size(), i, fromLock, toLock, fromStock, toStock, fromBarrel, toBarrel);
+            generateTestCases(stockValues.size(), i);
         }
     }
 
@@ -57,7 +56,7 @@ public class CommissionService {
         int nomBarrel = (fromBarrel + toBarrel) / 2;
         if (type == 0) {
             Commission commission = new Commission();
-            commission.setInput(nomLock, nomStock, nomBarrel);
+            commission.setInput(30, 35, 40);
             commission.setCommission();
             repo.save(commission);
             return;
@@ -65,7 +64,7 @@ public class CommissionService {
 
         for (int i = 0; i < size; i++) {
             Commission commission = new Commission();
-            commission.setInput(nomLock, nomStock, nomBarrel);
+            commission.setInput(30, 35, 40);
 
             if (type == 1) {
                 commission.setTotalLocks(lockValues.get(i));
