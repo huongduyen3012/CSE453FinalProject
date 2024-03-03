@@ -14,55 +14,52 @@ public class TriangleService {
     @Autowired
     private TriangleRepository repo;
 
-    private List<Integer> values = new LinkedList<>();
-
     public List<Triangle> listAll() {
         return (List<Triangle>) repo.findAll();
     }
 
     public void excute(String testType) {
         repo.truncateTable();
-    }
-
-    public void execute(Input input) {
-        this.deleteAll();
-        this.values = input.getInputAsList();
-
-        if (input.getType().equalsIgnoreCase("robust")) {
-            this.values.addFirst(this.values.getFirst() - 1);
-            this.values.addLast(this.values.getLast() + 1);
-        }
         for (int i = 0; i < 4; i++) {
-            generateTestCases(this.values.size(), i);
+            if (testType.equals("normal")) {
+                generateTestCases(i, Arrays.asList(10, 11, 219, 220));
+            } else {
+                generateTestCases(i, Arrays.asList(9, 10, 11, 219, 220, 221));
+            }
         }
     }
 
-
-    private void generateTestCases(int size, int location) {
-        int nom = values.get(values.size() / 2);
-
-        if (location == 0) {
-            Triangle triangle = new Triangle();
-            triangle.setSide(nom, nom, nom);
-            triangle.setType();
-            repo.save(triangle);
-            return;
-        }
-
-        for (int i = 0; i < size; i++) {
-            Triangle triangle = new Triangle();
-            triangle.setSide(nom, nom, nom);
-
-            if (location == 1) {
-                triangle.setSide1(values.get(i));
-            } else if (location == 2) {
-                triangle.setSide2(values.get(i));
-            } else {
-                triangle.setSide3(values.get(i));
-            }
-
-            triangle.setType();
-            repo.save(triangle);
+    private void generateTestCases(int location, List<Integer> values) {
+        switch (location) {
+            case 1:
+                for (Integer value : values) {
+                    Triangle triangle = new Triangle();
+                    triangle.setSide(value, 115, 115);
+                    triangle.setType();
+                    repo.save(triangle);
+                }
+                break;
+            case 2:
+                for (Integer value : values) {
+                    Triangle triangle = new Triangle();
+                    triangle.setSide(115, value, 115);
+                    triangle.setType();
+                    repo.save(triangle);
+                }
+                break;
+            case 3:
+                for (Integer value : values) {
+                    Triangle triangle = new Triangle();
+                    triangle.setSide(115, 115, value);
+                    triangle.setType();
+                    repo.save(triangle);
+                }
+                break;
+            default:
+                Triangle triangle = new Triangle();
+                triangle.setSide(115, 115, 115);
+                triangle.setType();
+                repo.save(triangle);
         }
     }
 }
