@@ -33,9 +33,4 @@ public class TriangleController {
     public String triangle() {
         return "TriangleGenerator";
     }
-
-    @GetMapping("/index")
-    public String index() {
-        return "index";
-    }
 }
