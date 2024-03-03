@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
 
 @Service
@@ -21,11 +20,7 @@ public class TriangleService {
         return (List<Triangle>) repo.findAll();
     }
 
-    public void save(Triangle triangle) {
-        repo.save(triangle);
-    }
-
-    public void deleteAll() {
+    public void excute(String testType) {
         repo.truncateTable();
     }
 

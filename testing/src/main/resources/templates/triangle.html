@@ -11,12 +11,12 @@
     <h2>Triangle Test Generator</h2>
     <form th:action="@{/triangle/generate}" method="get" th:object="${value}">
         <div class="border border-secondary rounded p-3">
-            <div class="form-group row">
-                <label for="from">Enter range of 3 sides of the triangle from: </label>
-                <input type="number" id="from" name="from" th:field="*{min}">
-                <label for="to">to: </label>
-                <input type="number" id="to" name="to" th:field="*{max}"><br><br>
-            </div>
+            <!--            <div class="form-group row">-->
+            <!--                <label for="fromA">Side A from:</label>-->
+            <!--                <input type="number" id="fromA" name="fromA" min="10" max="220" required>-->
+            <!--                <label for="toA">to:</label>-->
+            <!--                <input type="number" id="toA" name="toA" min="10" max="220" required><br><br>-->
+            <!--            </div>-->
             <div class="form-group row">
                 <select class="custom-select" id="inputGroupSelect02" name="testType">
                     <option disabled th:field="*{type}">Choose...</option>
@@ -53,7 +53,6 @@
         </th:block>
         </tbody>
     </table>
-
 </div>
 </body>
 </html>

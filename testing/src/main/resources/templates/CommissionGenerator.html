@@ -2,9 +2,12 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Testing Application</title>
-    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" type="text/css">
-    <link rel="stylesheet" th:href="@{/style.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/webjar/bootstrap/css/bootstrap.min.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}">
 
 </head>
 <body>
@@ -12,24 +15,12 @@
     <h2>Commission Test Generator</h2>
     <form th:action="@{/commission/generate}" method="get" th:object="${commission}">
         <div class="border border-secondary rounded p-3">
-            <div class="form-group row">
-                <label for="fromLock">Enter range for Lock from: </label>
-                <input type="number" id="fromLock" name="fromLock">
-                <label for="toLock">to: </label>
-                <input type="number" id="toLock" name="toLock"><br><br>
-            </div>
-            <div class="form-group row">
-                <label for="fromStock">Enter range for Stock from: </label>
-                <input type="number" id="fromStock" name="fromStock">
-                <label for="toStock">to: </label>
-                <input type="number" id="toStock" name="toStock"><br><br>
-            </div>
-            <div class="form-group row">
-                <label for="fromBarrel">Enter range for Barrel from: </label>
-                <input type="number" id="fromBarrel" name="fromBarrel">
-                <label for="toBarrel">to: </label>
-                <input type="number" id="toBarrel" name="toBarrel"><br><br>
-            </div>
+            <!--            <div class="form-group row">-->
+            <!--                <label for="fromA">Side A from:</label>-->
+            <!--                <input type="number" id="fromA" name="fromA" min="10" max="220" required>-->
+            <!--                <label for="toA">to:</label>-->
+            <!--                <input type="number" id="toA" name="toA" min="10" max="220" required><br><br>-->
+            <!--            </div>-->
             <div class="form-group row">
                 <select class="custom-select" id="inputGroupSelect02" name="testType">
                     <option selected>Choose...</option>
@@ -38,9 +29,6 @@
                 </select>
             </div>
             <button type="submit">Generate Test Cases</button>
-            <a th:href="@{/index}">
-                <button type="button">Home</button>
-            </a>
         </div>
     </form>
 </div>
