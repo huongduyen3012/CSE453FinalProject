@@ -12,9 +12,9 @@ import java.util.List;
 @Service
 public class CommissionService {
     private final CommissionRepository repo;
-    private  List<Integer> lockValues;
-    private  List<Integer> stockValues;
-    private  List<Integer> barrelValues;
+    private List<Integer> lockValues;
+    private List<Integer> stockValues;
+    private List<Integer> barrelValues;
 
     public CommissionService(CommissionRepository repo, List<Integer> lockValues, List<Integer> stockValues, List<Integer> barrelValues) {
         this.repo = repo;
@@ -73,14 +73,14 @@ public class CommissionService {
 
         for (int i = 0; i < size; i++) {
             Commission commission = new Commission();
-            commission.setInput(30, 35, 40);
+
 
             if (type == 1) {
-                commission.setTotalLocks(lockValues.get(i));
+                commission.setInput(lockValues.get(i), nomStock, nomBarrel);
             } else if (type == 2) {
-                commission.setTotalStocks(stockValues.get(i));
+                commission.setInput(nomLock, stockValues.get(i), nomBarrel);
             } else {
-                commission.setTotalBarrales(barrelValues.get(i));
+                commission.setInput(nomLock, nomStock, barrelValues.get(i));
             }
 
             commission.setCommission();

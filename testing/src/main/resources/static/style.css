@@ -1,5 +1,4 @@
-
-body{
+.index{
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -33,7 +32,7 @@ button {
 }
 
 button:hover {
-    background-color: cornflowerblue;
+    background-color: #55c2da;
     transform: scale(1.1);
 }
 
