@@ -11,14 +11,10 @@
     <h2>AUTOMATED TEST CASE GENERATING TOOL</h2>
     <div class="row justify-content-center">
         <div class="col-3">
-            <form th:action="@{/triangle}" method="get" class="text-center">
-                <button type="submit">Triangle Generator</button>
-            </form>
+            <a th:href="@{'/triangle'}"><button class="triangle" type="button">Triangle</button></a>
         </div>
         <div class="col-3">
-            <form th:action="@{/commission}" method="get" class="text-center">
-                <button type="submit">Commission Generator</button>
-            </form>
+            <a th:href="@{'/commission'}"><button class="commission" type="button">Commission</button></a>
         </div>
     </div>
 </div>

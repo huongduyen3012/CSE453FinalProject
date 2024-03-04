@@ -1,4 +1,13 @@
 
+body{
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+}
+
 table {
     border-collapse: collapse;
     width: 100%;
@@ -13,10 +22,14 @@ th {
 }
 
 button {
+    border: 2px;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
     border-radius: 10px;
-    padding: 5px;
-    background-color: darkolivegreen;
-    color: #f2f2f2;
+    color: #fff;
+    background: #5783db;
 }
 
 button:hover {
@@ -27,3 +40,52 @@ button:hover {
 .title {
     color: darkslateblue;
 }
+
+.triangle {
+    color: #33b249;
+    box-shadow:
+            0.3em 0.3em 0 0 #33b249,
+            inset 0.3em 0.3em 0 0 #33b249;
+    transition: 0.25s;
+    background: none;
+    border-radius: 0;
+    &:hover,
+    &:focus {
+        box-shadow:
+                0 0 0 0 #5adbb5,
+                inset 6em 3.5em 0 0 #5adbb5;
+        border-color:#5adbb5;
+        color: #fff;
+    }
+}
+.commission {
+    box-shadow:
+            0.3em 0.3em 0 0 #80669d,
+            inset 0.3em 0.3em 0 0 #80669d;
+    color: #80669d;
+    transition: 0.25s;
+    background: none;
+    border-radius: 0;
+    &:hover,
+    &:focus {
+        box-shadow:
+                0 0 0 0 #a881af,
+                inset 6em 3.5em 0 0 #a881af;
+        border-color: #a881af;
+        color: #fff;
+    }
+}
+ form{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: auto;
+ }
+
+ label, select{
+     margin: 10px 10px 0 10px;
+ }
+
+ input{
+     margin-right: 10px;
+ }

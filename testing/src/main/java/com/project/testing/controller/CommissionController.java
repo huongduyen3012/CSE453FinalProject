@@ -18,8 +18,11 @@ public class CommissionController {
     }
 
     @GetMapping("/commission/generate")
-    public String generate(Model model, @RequestParam("testType") String testType) {
-        commissionService.execute(testType);
+    public String generate(Model model, @RequestParam("testType") String testType,
+                           @RequestParam("fromLock") int fromLock, @RequestParam("toLock") int toLock,
+                           @RequestParam("fromStock") int fromStock, @RequestParam("toStock") int toStock,
+                           @RequestParam("fromBarrel") int fromBarrel, @RequestParam("toBarrel") int toBarrel) {
+        commissionService.execute(testType, fromLock, toLock, fromStock, toStock, fromBarrel, toBarrel);
 
         model.addAttribute("commissions", commissionService.listAll());
 

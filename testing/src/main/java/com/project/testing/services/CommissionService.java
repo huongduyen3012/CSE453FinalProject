@@ -11,12 +11,17 @@ import java.util.List;
 
 @Service
 public class CommissionService {
-    @Autowired
-    private CommissionRepository repo;
+    private final CommissionRepository repo;
+    private  List<Integer> lockValues;
+    private  List<Integer> stockValues;
+    private  List<Integer> barrelValues;
 
-    private List<Integer> lockValues = new LinkedList<>(Arrays.asList(1, 2, 59, 60));
-    private List<Integer> stockValues = new LinkedList<>(Arrays.asList(1, 2, 69, 70));
-    private List<Integer> barrelValues = new LinkedList<>(Arrays.asList(1, 2, 79, 80));
+    public CommissionService(CommissionRepository repo, List<Integer> lockValues, List<Integer> stockValues, List<Integer> barrelValues) {
+        this.repo = repo;
+        this.lockValues = lockValues;
+        this.stockValues = stockValues;
+        this.barrelValues = barrelValues;
+    }
 
     public List<Commission> listAll() {
         return (List<Commission>) repo.findAll();
@@ -30,8 +35,13 @@ public class CommissionService {
         repo.truncateTable();
     }
 
-    public void execute(String testType) {
+    public void execute(String testType, int fromLock, int toLock,
+                        int fromStock, int toStock, int fromBarrel, int toBarrel) {
         this.deleteAll();
+
+        lockValues = new LinkedList<>(Arrays.asList(fromLock, fromLock + 1, toLock - 1, toLock));
+        stockValues = new LinkedList<>(Arrays.asList(fromStock, fromStock + 1, toStock - 1, toStock));
+        barrelValues = new LinkedList<>(Arrays.asList(fromBarrel, fromBarrel + 1, toBarrel - 1, toBarrel));
 
         if (testType.equalsIgnoreCase("robust")) {
             lockValues.addFirst(lockValues.getFirst() - 1);
@@ -43,14 +53,19 @@ public class CommissionService {
         }
 
         for (int i = 0; i < 4; i++) {
-            generateTestCases(stockValues.size(), i);
+            generateTestCases(stockValues.size(), i, fromLock, toLock, fromStock, toStock, fromBarrel, toBarrel);
         }
     }
 
-    private void generateTestCases(int size, int type) {
+    private void generateTestCases(int size, int type, int fromLock, int toLock,
+                                   int fromStock, int toStock, int fromBarrel, int toBarrel) {
+        int nomLock = (fromLock + toLock) / 2;
+        int nomStock = (fromStock + toStock) / 2;
+        int nomBarrel = (fromBarrel + toBarrel) / 2;
+
         if (type == 0) {
             Commission commission = new Commission();
-            commission.setInput(30, 35, 40);
+            commission.setInput(nomLock, nomStock, nomBarrel);
             commission.setCommission();
             repo.save(commission);
             return;
