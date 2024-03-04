@@ -1,14 +1,27 @@
+var inputFrom;
+var newMin;
+
 $("#from").change(function() {
-    $("#to").attr('min',$("#from").val());
+    inputFrom = parseInt($("#fromLock").val());
+    newMin = inputFrom + 1;
+
+    $("#to").attr('min',newMin);
 });
 $("#fromLock").change(function() {
-    $("#toLock").attr('min',$("#fromLock").val());
+    inputFrom = parseInt($("#fromLock").val());
+    newMin = inputFrom + 1;
+
+    $("#toLock").attr('min',newMin);
 });
 $("#fromStock").change(function() {
-    $("#toStock").attr('min',$("#fromStock").val());
+    inputFrom = parseInt($("#fromStock").val());
+    newMin = inputFrom + 1;
+
+    $("#toStock").attr('min',newMin);
 });
 $("#fromBarrel").change(function() {
-    $("#toBarrel").attr('min',$("#fromBarrel").val());
-});
+    inputFrom = parseInt($("#fromBarrel").val());
+    newMin = inputFrom +1;
 
-document.cookie;
+    $("#toBarrel").attr('min',newMin);
+});
