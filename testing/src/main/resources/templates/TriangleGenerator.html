@@ -13,13 +13,13 @@
         <div class="col justify-content-center">
             <form th:action="@{/triangle/generate}" method="get" th:object="${triangle}">
                 <div class="border border-secondary rounded p-3">
-                    <div class="form-group row">
+                    <div class="form-group">
                         <label for="from">Enter range from: </label>
                         <input type="number" id="from" name="from" inputmode="numeric" min="10" max="220">
                         <label for="to">to: </label>
                         <input type="number" id="to" name="to" inputmode="numeric" max="220"><br><br>
                     </div>
-                    <div class="form-group row">
+                    <div class="form-group">
                         <select class="custom-select" id="inputGroupSelect02" name="testType">
                             <option value="normal" selected>Normal BVA</option>
                             <option value="robust">Robust BVA</option>

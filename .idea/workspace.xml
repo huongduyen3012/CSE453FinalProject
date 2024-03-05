@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a63852a-f02d-44f5-b17f-f6e21cccb69f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0bf6e96a-23cc-4661-8489-ca9751f8b182.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0bf6e96a-23cc-4661-8489-ca9751f8b182.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/services/CommissionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/services/CommissionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/entities/Commission.java" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/main/java/com/project/testing/entities/Commission.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testing/src/main/resources/static/custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/main/resources/static/custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/src/main/resources/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/main/resources/static/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testing/src/main/resources/templates/CommissionGenerator.html" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/main/resources/templates/CommissionGenerator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testing/src/main/resources/templates/TriangleGenerator.html" beforeDir="false" afterPath="$PROJECT_DIR$/testing/src/main/resources/templates/TriangleGenerator.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -323,6 +323,10 @@
       <workItem from="1709564148672" duration="296000" />
       <workItem from="1709565521156" duration="3074000" />
       <workItem from="1709568696858" duration="15000" />
+      <workItem from="1709612421184" duration="914000" />
+      <workItem from="1709613908606" duration="226000" />
+      <workItem from="1709622715001" duration="30000" />
+      <workItem from="1709646377612" duration="983000" />
     </task>
     <servers />
   </component>
