@@ -2,7 +2,7 @@ var inputFrom;
 var newMin;
 
 $("#from").change(function() {
-    inputFrom = parseInt($("#fromLock").val());
+    inputFrom = parseInt($("#from").val());
     newMin = inputFrom + 1;
 
     $("#to").attr('min',newMin);

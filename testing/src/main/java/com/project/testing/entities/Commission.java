@@ -23,9 +23,9 @@ public class Commission {
     @Transient
     private double barralesPrice;
     public Commission() {
-        lockPrice = 45.0;
-        stockPrice = 30.0;
-        barralesPrice = 25.0;
+        lockPrice = 30.0;
+        stockPrice = 35.0;
+        barralesPrice = 40.0;
     }
 
     public void setInput(int locks, int stocks, int barrales) {
@@ -80,9 +80,9 @@ public class Commission {
 
     public double calCommission(double sales) {
         double commission;
-        boolean c1 = (1 <= totalLocks) && (totalLocks <= 70);
-        boolean c2 = (1 <= totalStocks) && (totalStocks <= 80);
-        boolean c3 = (1 <= totalBarrales) && (totalBarrales <= 90);
+        boolean c1 = (1 <= totalLocks) && (totalLocks <= 60);
+        boolean c2 = (1 <= totalStocks) && (totalStocks <= 70);
+        boolean c3 = (1 <= totalBarrales) && (totalBarrales <= 80);
 
         if (!c1 || !c2 || !c3)
             commission = 0.0;
